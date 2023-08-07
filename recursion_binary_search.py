@@ -1,10 +1,10 @@
 array_of_numbers= []
 
 def arrayadder():
-    array_of_numbers.append(input('Entre number to put in array: '))
+    array_of_numbers.append(input('Enter number to put in array: '))
     print(f'new array = {array_of_numbers}')
-    status=input('would you like to continue(y/n)? ')
-    if (status == 'n'):
+    status=input('\nwould you like to continue(y/n)? ')
+    if (status == 'y'):
         return arrayadder()
     else:
         return
@@ -16,7 +16,7 @@ def binary_search(array_of_numbers,user_number):
     else:
         middle=len(array_of_numbers)//2
         print(f'array of numbers = {array_of_numbers}')
-        print(f'middle = {middle}')
+        print(f'index: {middle} \nnumber middle: {array_of_numbers[middle]}\n')
         
         if array_of_numbers[middle] == user_number:
             print(f'{user_number} is in array')  
@@ -27,5 +27,5 @@ def binary_search(array_of_numbers,user_number):
                 return binary_search(array_of_numbers[:middle], user_number)
             
 arrayadder()
-user_number = input('what number must i check: ')
+user_number = input('\nwhat number must i check: ')
 binary_search(array_of_numbers, user_number)
